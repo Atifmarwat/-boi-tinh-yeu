@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Lá Số Tử Vi Trọn Đời - Luận Giải Chi Tiết | LoveFortune</title>
+    <style>
+        /* ============================================================
+                   COMPLETE STYLES
+                   ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8f4f8;
+            color: #2d1f2e;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo .icon {
+            font-size: 1.8rem;
+        }
+
+        .logo .brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo .brand span {
+            color: #f06eaa;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #ffffff;
+            background: rgba(240, 110, 170, 0.15);
+        }
+
+        .nav-menu a.active {
+            color: #f06eaa;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 30%, #4a254b 60%, #6b3a6e 100%);
+            padding: 70px 40px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(233, 30, 99, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(156, 39, 176, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 .highlight {
+            color: #f06eaa;
+        }
+
+        .hero .sub-text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 16px auto 28px;
+            line-height: 1.7;
+        }
+
+        .hero .divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #f06eaa, #9c27b0);
+            margin: 0 auto 26px;
+            border-radius: 4px;
+        }
+
+        .hero .form-label {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 22px;
+        }
+
+        /* ===== FORM ===== */
+        .form-container {
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.06);
+            color: white;
+            outline: none;
+            transition: 0.3s;
+            font-family: inherit;
+            backdrop-filter: blur(4px);
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #f06eaa;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 25px rgba(240, 110, 170, 0.08);
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23f06eaa' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 14px;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: #2d1a2d;
+            color: white;
+        }
+
+        .form-row-3 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .form-row-3 .form-group {
+            flex: 1 1 150px;
+            min-width: 120px;
+            margin-bottom: 0;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #f06eaa, #9c27b0);
+            border: none;
+            padding: 16px 60px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 30px rgba(240, 110, 170, 0.25);
+            margin-top: 20px;
+            font-family: inherit;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(240, 110, 170, 0.35);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* ===== LOADER ===== */
+        .loader-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 18px 0 6px;
+        }
+
+        .loader-container.show {
+            display: flex;
+        }
+
+        .loader-dot {
+            width: 14px;
+            height: 14px;
+            background: #f06eaa;
+            border-radius: 50%;
+            animation: pulseDot 1.2s ease-in-out infinite;
+        }
+
+        .loader-dot:nth-child(2) {
+            animation-delay: 0.2s;
+            background: #ab47bc;
+        }
+        .loader-dot:nth-child(3) {
+            animation-delay: 0.4s;
+            background: #7b1fa2;
+        }
+
+        @keyframes pulseDot {
+            0%,
+            80%,
+            100% {
+                transform: scale(0.6);
+                opacity: 0.3;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .scroll-indicator {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .scroll-indicator .mouse {
+            width: 24px;
+            height: 36px;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator .mouse::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            animation: scrollWheel 1.5s ease-in-out infinite;
+        }
+
+        @keyframes scrollWheel {
+            0% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(14px);
+            }
+        }
+
+        /* ============================================================
+                   CONTENT SECTION
+                   ============================================================ */
+        .content-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px 40px;
+        }
+
+        .content-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .content-section .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #2d1f2e;
+        }
+
+        .content-section .section-header h2 span {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content-section .section-header p {
+            color: #7b4b7a;
+            max-width: 600px;
+            margin: 8px auto 0;
+            font-size: 1.05rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 24px;
+            padding: 28px 24px;
+            border: 1px solid #efe0ed;
+            transition: 0.3s;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .content-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(157, 71, 158, 0.08);
+            border-color: #f06eaa;
+        }
+
+        .content-card .icon {
+            font-size: 2.6rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .content-card h3 {
+            font-size: 1.2rem;
+            color: #2d1f2e;
+            margin-bottom: 8px;
+        }
+
+        .content-card p {
+            font-size: 0.95rem;
+            color: #5a4a5a;
+            line-height: 1.7;
+        }
+
+        .content-card .tag {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #f06eaa;
+            background: rgba(240, 110, 170, 0.08);
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+        }
+
+        /* ============================================================
+                   FAQ SECTION — DROPDOWN (ACCORDION)
+                   ============================================================ */
+        .faq-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 40px 20px;
+        }
+
+        .faq-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-section .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #2d1f2e;
+        }
+
+        .faq-section .section-header h2 span {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .faq-section .section-header p {
+            color: #7b4b7a;
+            max-width: 600px;
+            margin: 8px auto 0;
+            font-size: 1.05rem;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #efe0ed;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faq-item:hover {
+            border-color: #d4c4d4;
+        }
+
+        .faq-item.active {
+            border-color: #f06eaa;
+            box-shadow: 0 4px 20px rgba(240, 110, 170, 0.06);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 18px 24px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2d1f2e;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            transition: 0.2s;
+            gap: 16px;
+        }
+
+        .faq-question:hover {
+            background: rgba(240, 110, 170, 0.03);
+        }
+
+        .faq-question .faq-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .faq-question .faq-arrow {
+            font-size: 1.2rem;
+            color: #7b4b7a;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+            color: #f06eaa;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            padding: 0 24px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding: 0 24px 20px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: #5a4a5a;
+            line-height: 1.8;
+            padding-top: 4px;
+        }
+
+        /* ============================================================
+                   RELATED TOOLS SECTION — WITH BUTTONS
+                   ============================================================ */
+        .related-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 40px 50px;
+        }
+
+        .related-section .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .related-section .section-header h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #2d1f2e;
+        }
+
+        .related-section .section-header h2 span {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .related-item {
+            background: white;
+            border-radius: 20px;
+            padding: 28px 22px 22px;
+            text-align: center;
+            border: 1px solid #efe0ed;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .related-item:hover {
+            border-color: #f06eaa;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(157, 71, 158, 0.08);
+        }
+
+        .related-item .tool-icon {
+            font-size: 2.6rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .related-item h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #2d1f2e;
+            margin-bottom: 4px;
+        }
+
+        .related-item p {
+            font-size: 0.85rem;
+            color: #7b4b7a;
+            margin-bottom: 14px;
+            flex-grow: 1;
+        }
+
+        .tool-btn {
+            display: inline-block;
+            padding: 8px 28px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #f06eaa, #9c27b0);
+            color: white;
+            font-weight: 600;
+            font-size: 0.82rem;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 16px rgba(240, 110, 170, 0.2);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            letter-spacing: 0.3px;
+            width: 100%;
+            max-width: 180px;
+        }
+
+        .tool-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(240, 110, 170, 0.35);
+            background: linear-gradient(135deg, #d85a9a, #8a1fa0);
+        }
+
+        /* ============================================================
+                   MODAL
+                   ============================================================ */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 40px;
+            max-width: 750px;
+            width: 100%;
+            padding: 40px 35px 35px;
+            max-height: 92vh;
+            overflow-y: auto;
+            animation: modalSlide 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+        }
+
+        @keyframes modalSlide {
+            0% {
+                opacity: 0;
+                transform: scale(0.92) translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #7b4b7a;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+
+        .modal-close:hover {
+            background: #f3e5f5;
+        }
+
+        /* ===== RESULT STYLES ===== */
+        .result-title {
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #2d1f2e;
+            margin-bottom: 4px;
+        }
+
+        .result-title .highlight {
+            color: #f06eaa;
+        }
+
+        .result-subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7b4b7a;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .result-card {
+            background: #fcf6fa;
+            border-radius: 16px;
+            padding: 16px 18px;
+            border: 1px solid #efe0ed;
+            text-align: center;
+        }
+
+        .result-card .rlabel {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #7b4b7a;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .result-card .rvalue {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        .result-card .rdesc {
+            font-size: 0.8rem;
+            color: #5a4a5a;
+            margin-top: 2px;
+        }
+
+        .result-analysis {
+            background: #fcf6fa;
+            border-radius: 20px;
+            padding: 20px 24px;
+            margin: 16px 0;
+            border-left: 5px solid #e91e63;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #2d1f2e;
+        }
+
+        .result-analysis strong {
+            color: #e91e63;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 18px 0 14px;
+            flex-wrap: wrap;
+        }
+
+        .result-actions .action-btn {
+            padding: 10px 32px;
+            border-radius: 50px;
+            border: 2px solid #efe0ed;
+            background: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #2d1f2e;
+            cursor: pointer;
+            transition: 0.25s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .result-actions .action-btn:hover {
+            border-color: #f06eaa;
+            background: #fdf0f6;
+            transform: translateY(-2px);
+        }
+
+        .result-actions .action-btn.primary {
+            background: linear-gradient(135deg, #f06eaa, #9c27b0);
+            border-color: transparent;
+            color: white;
+        }
+
+        .result-actions .action-btn.primary:hover {
+            box-shadow: 0 6px 24px rgba(240, 110, 170, 0.3);
+        }
+
+        /* ============================================================
+                   FOOTER
+                   ============================================================ */
+        .site-footer {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 40px 30px;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand .logo-text span {
+            color: #f06eaa;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            padding: 4px 0;
+            font-size: 0.88rem;
+            transition: 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #f06eaa;
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 992px) {
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 0 20px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1a0a1a;
+                padding: 20px;
+                gap: 4px;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 12px 16px;
+                width: 100%;
+                border-radius: 12px;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 50px 20px 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .sub-text {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+
+            .form-row-3 .form-group {
+                flex: 1 1 100%;
+            }
+
+            .btn-submit {
+                padding: 14px 40px;
+                font-size: 1rem;
+            }
+
+            .content-section {
+                padding: 40px 20px 30px;
+            }
+
+            .content-section .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-section {
+                padding: 30px 20px 10px;
+            }
+
+            .faq-section .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .faq-question {
+                padding: 14px 18px;
+                font-size: 0.9rem;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 0 18px 16px;
+            }
+
+            .faq-answer p {
+                font-size: 0.88rem;
+            }
+
+            .related-section {
+                padding: 10px 20px 30px;
+            }
+
+            .related-section .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .tool-btn {
+                font-size: 0.75rem;
+                padding: 6px 20px;
+                max-width: 150px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .site-footer {
+                padding: 40px 20px 24px;
+            }
+
+            .modal-content {
+                padding: 28px 18px 24px;
+                border-radius: 28px;
+                margin: 10px;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .result-card .rvalue {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero .sub-text {
+                font-size: 0.8rem;
+            }
+
+            .btn-submit {
+                font-size: 0.85rem;
+                padding: 12px 28px;
+            }
+
+            .content-card {
+                padding: 20px 18px;
+            }
+
+            .result-card {
+                padding: 12px 14px;
+            }
+
+            .result-card .rvalue {
+                font-size: 1.2rem;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .related-item {
+                padding: 16px 12px;
+            }
+
+            .related-item .tool-icon {
+                font-size: 1.8rem;
+            }
+
+            .related-item h4 {
+                font-size: 0.85rem;
+            }
+
+            .tool-btn {
+                font-size: 0.7rem;
+                padding: 5px 14px;
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="icon">❤️</span>
+                <span class="brand">Love<span>Fortune</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="#tool">Lá số tử vi</a></li>
+                <li><a href="#content">Bài viết</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#footer">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="tool">
+        <div class="hero-content">
+            <h1>
+                <span class="highlight">LÁ SỐ TỬ VI</span> TRỌN ĐỜI<br>
+                LUẬN GIẢI CHI TIẾT BẰNG <span class="highlight">CÔNG NGHỆ AI</span>
+            </h1>
+
+            <p class="sub-text">
+                Khám phá vận mệnh, tình duyên, sự nghiệp, tài lộc và sức khỏe
+                qua lá số tử vi trọn đời. Luận giải chi tiết và chính xác.
+            </p>
+
+            <div class="divider"></div>
+
+            <p class="form-label">Nhập thông tin của bạn:</p>
+
+            <!-- ===== FORM ===== -->
+            <div class="form-container">
+                <form id="tuviForm" onsubmit="return false;">
+
+                    <!-- Họ và tên -->
+                    <div class="form-group">
+                        <label>Họ và tên:</label>
+                        <input type="text" id="fullName" placeholder="Nhập họ và tên" value="Nguyễn Văn A">
+                    </div>
+
+                    <!-- Giới tính -->
+                    <div class="form-group">
+                        <label>Giới tính:</label>
+                        <select id="gender">
+                            <option value="0">Chọn giới tính</option>
+                            <option value="1" selected>Nam</option>
+                            <option value="2">Nữ</option>
+                        </select>
+                    </div>
+
+                    <!-- Ngày/tháng/năm sinh -->
+                    <div class="form-group">
+                        <label>Ngày/tháng/năm sinh dương lịch:</label>
+                        <div class="form-row-3">
+                            <div class="form-group">
+                                <select id="day">
+                                    <option value="01">Ngày 01</option><option value="02">Ngày 02</option>
+                                    <option value="03">Ngày 03</option><option value="04">Ngày 04</option>
+                                    <option value="05">Ngày 05</option><option value="06">Ngày 06</option>
+                                    <option value="07">Ngày 07</option><option value="08">Ngày 08</option>
+                                    <option value="09">Ngày 09</option><option value="10" selected>Ngày 10</option>
+                                    <option value="11">Ngày 11</option><option value="12">Ngày 12</option>
+                                    <option value="13">Ngày 13</option><option value="14">Ngày 14</option>
+                                    <option value="15">Ngày 15</option><option value="16">Ngày 16</option>
+                                    <option value="17">Ngày 17</option><option value="18">Ngày 18</option>
+                                    <option value="19">Ngày 19</option><option value="20">Ngày 20</option>
+                                    <option value="21">Ngày 21</option><option value="22">Ngày 22</option>
+                                    <option value="23">Ngày 23</option><option value="24">Ngày 24</option>
+                                    <option value="25">Ngày 25</option><option value="26">Ngày 26</option>
+                                    <option value="27">Ngày 27</option><option value="28">Ngày 28</option>
+                                    <option value="29">Ngày 29</option><option value="30">Ngày 30</option>
+                                    <option value="31">Ngày 31</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select id="month">
+                                    <option value="01">Tháng 01</option><option value="02">Tháng 02</option>
+                                    <option value="03">Tháng 03</option><option value="04">Tháng 04</option>
+                                    <option value="05">Tháng 05</option><option value="06">Tháng 06</option>
+                                    <option value="07" selected>Tháng 07</option><option value="08">Tháng 08</option>
+                                    <option value="09">Tháng 09</option><option value="10">Tháng 10</option>
+                                    <option value="11">Tháng 11</option><option value="12">Tháng 12</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="year" placeholder="Năm sinh" value="1995">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Giờ sinh -->
+                    <div class="form-group">
+                        <label>Giờ sinh (Âm lịch):</label>
+                        <select id="hour">
+                            <option value="0">Chọn giờ sinh</option>
+                            <option value="1">Giờ Tý (23:00 - 00:59)</option>
+                            <option value="2">Giờ Sửu (01:00 - 02:59)</option>
+                            <option value="3">Giờ Dần (03:00 - 04:59)</option>
+                            <option value="4" selected>Giờ Mão (05:00 - 06:59)</option>
+                            <option value="5">Giờ Thìn (07:00 - 08:59)</option>
+                            <option value="6">Giờ Tỵ (09:00 - 10:59)</option>
+                            <option value="7">Giờ Ngọ (11:00 - 12:59)</option>
+                            <option value="8">Giờ Mùi (13:00 - 14:59)</option>
+                            <option value="9">Giờ Thân (15:00 - 16:59)</option>
+                            <option value="10">Giờ Dậu (17:00 - 18:59)</option>
+                            <option value="11">Giờ Tuất (19:00 - 20:59)</option>
+                            <option value="12">Giờ Hợi (21:00 - 22:59)</option>
+                        </select>
+                    </div>
+
+                    <!-- Nơi sinh -->
+                    <div class="form-group">
+                        <label>Nơi sinh (Thành phố/Tỉnh):</label>
+                        <input type="text" id="birthPlace" placeholder="Nhập nơi sinh" value="Hà Nội">
+                    </div>
+
+                    <div class="center">
+                        <button type="submit" class="btn-submit" id="calculateBtn">🔮 XEM LÁ SỐ TỬ VI</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="loader-container" id="loaderContainer">
+                <div class="loader-dot"></div>
+                <div class="loader-dot"></div>
+                <div class="loader-dot"></div>
+                <span style="color:rgba(255,255,255,0.4); font-weight:400; margin-left:6px;">Đang luận giải lá số...</span>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Cuộn xuống</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    CONTENT SECTION
+    ============================================================ -->
+    <section class="content-section" id="content">
+        <div class="section-header">
+            <h2>📖 Kiến thức <span>Tử Vi</span></h2>
+            <p>Những bài viết giúp bạn hiểu rõ hơn về lá số tử vi và cách luận giải.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <span class="icon">🌟</span>
+                <h3>Tử vi là gì?</h3>
+                <p>Tử vi là một môn khoa học dự đoán vận mệnh con người dựa trên ngày giờ sinh và các sao trên bầu trời.</p>
+                <span class="tag">📜 Kiến thức</span>
+            </div>
+
+            <div class="content-card">
+                <span class="icon">🔮</span>
+                <h3>Các cung trong tử vi</h3>
+                <p>Lá số tử vi có 12 cung, mỗi cung đại diện cho một khía cạnh khác nhau của cuộc sống.</p>
+                <span class="tag">🔍 Phân tích</span>
+            </div>
+
+            <div class="content-card">
+                <span class="icon">⭐</span>
+                <h3>Các sao chính trong tử vi</h3>
+                <p>Các sao chính quyết định tính cách và vận mệnh của mỗi người trong lá số tử vi.</p>
+                <span class="tag">🌟 Chiêm tinh</span>
+            </div>
+
+            <div class="content-card">
+                <span class="icon">📊</span>
+                <h3>Đại vận và tiểu vận</h3>
+                <p>Đại vận là chu kỳ 10 năm, tiểu vận là vận hạn từng năm trong cuộc đời mỗi người.</p>
+                <span class="tag">⏳ Vận số</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FAQ SECTION
+    ============================================================ -->
+    <section class="faq-section" id="faq">
+        <div class="section-header">
+            <h2>❓ Câu hỏi thường gặp <span>(FAQ)</span></h2>
+            <p>Những thắc mắc phổ biến về lá số tử vi và cách luận giải.</p>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">🔮</span>
+                    <span>Lá số tử vi có chính xác không?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Lá số tử vi được xây dựng dựa trên sự kết hợp giữa kiến thức tử vi cổ truyền và công nghệ AI hiện đại, đảm bảo cung cấp thông tin đáng tin cậy và có giá trị tham khảo cao.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">📊</span>
+                    <span>Tử vi khác gì với Thần số học?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Tử vi dựa trên ngày giờ sinh và các sao trên bầu trời, trong khi Thần số học dựa trên tên và ngày sinh. Cả hai đều là công cụ giúp hiểu rõ bản thân và vận mệnh.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">💞</span>
+                    <span>Có thể xem tình duyên qua tử vi không?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Có. Cung Phu Thê trong lá số tử vi cho biết thông tin về tình duyên, hôn nhân và mối quan hệ với người khác giới.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-icon">🌟</span>
+                    <span>Làm thế nào để luận giải lá số tử vi?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Hệ thống của chúng tôi sử dụng công nghệ AI để phân tích các sao, cung và vận hạn, từ đó đưa ra luận giải chi tiết về cuộc đời bạn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    RELATED TOOLS
+    ============================================================ -->
+    <section class="related-section" id="related">
+        <div class="section-header">
+            <h2>🔗 Công cụ <span>liên quan</span></h2>
+            <p>Khám phá thêm các công cụ bói toán và phong thủy khác.</p>
+        </div>
+
+        <div class="related-grid">
+            <div class="related-item">
+                <span class="tool-icon">🔮</span>
+                <h4>Thần số học</h4>
+                <p>Khám phá bản thân qua con số</p>
+                <a href="#" class="tool-btn" onclick="goToTool(event, 'https://your-site.com/than-so-hoc')">🔗 Sử dụng ngay</a>
+            </div>
+
+            <div class="related-item">
+                <span class="tool-icon">⭐</span>
+                <h4>Bói tình yêu</h4>
+                <p>Xem độ tương hợp tình cảm</p>
+                <a href="#" class="tool-btn" onclick="goToTool(event, 'https://your-site.com/boi-tinh-yeu')">🔗 Sử dụng ngay</a>
+            </div>
+
+            <div class="related-item">
+                <span class="tool-icon">📅</span>
+                <h4>Xem ngày tốt</h4>
+                <p>Chọn ngày lành tháng tốt</p>
+                <a href="#" class="tool-btn" onclick="goToTool(event, 'https://your-site.com/xem-ngay-tot')">🔗 Sử dụng ngay</a>
+            </div>
+
+            <div class="related-item">
+                <span class="tool-icon">🏠</span>
+                <h4>Phong thủy</h4>
+                <p>Xem hướng nhà, bàn làm việc</p>
+                <a href="#" class="tool-btn" onclick="goToTool(event, 'https://your-site.com/phong-thuy')">🔗 Sử dụng ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MODAL ===== -->
+    <div class="modal-overlay" id="resultModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">✕</button>
+            <div id="resultContent"></div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-text">❤️ Love<span>Fortune</span></div>
+                <p>Nền tảng xem lá số tử vi và bói toán hàng đầu với độ chính xác cao.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Khám phá</h4>
+                <a href="#">Lá số tử vi</a>
+                <a href="#">Thần số học</a>
+                <a href="#">Bói tình yêu</a>
+                <a href="#">Phong thủy</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hỗ trợ</h4>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kết nối</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 LoveFortune.vn — Lá số tử vi trọn đời · Dành cho mục đích giải trí</p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // 1. MOBILE NAV
+        // ============================================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+            this.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('open');
+                mobileToggle.textContent = '☰';
+            });
+        });
+
+        // ============================================================
+        // 2. FAQ DROPDOWN
+        // ============================================================
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(function(el) {
+                if (el !== item) {
+                    el.classList.remove('active');
+                }
+            });
+
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        }
+
+        // ============================================================
+        // 3. TOOL BUTTONS
+        // ============================================================
+        function goToTool(event, url) {
+            event.preventDefault();
+            window.location.href = url;
+        }
+
+        // ============================================================
+        // 4. TỬ VI ALGORITHM (Competitor Style)
+        // ============================================================
+
+        // Lấy thông tin từ form
+        function getTuViData() {
+            const fullName = document.getElementById('fullName').value.trim() || 'Nguyễn Văn A';
+            const gender = document.getElementById('gender').value;
+            const day = document.getElementById('day').value;
+            const month = document.getElementById('month').value;
+            const year = document.getElementById('year').value || '1995';
+            const hour = document.getElementById('hour').value || '4';
+            const birthPlace = document.getElementById('birthPlace').value.trim() || 'Hà Nội';
+
+            return { fullName, gender, day, month, year, hour, birthPlace };
+        }
+
+        // Tính Can Chi năm sinh
+        function getCanChi(year) {
+            const can = ['Giáp', 'Ất', 'Bính', 'Đinh', 'Mậu', 'Kỷ', 'Canh', 'Tân', 'Nhâm', 'Quý'];
+            const chi = ['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tỵ', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'];
+            const canIndex = (year - 4) % 10;
+            const chiIndex = (year - 4) % 12;
+            return { can: can[canIndex], chi: chi[chiIndex] };
+        }
+
+        // Tính cung mệnh dựa trên năm sinh
+        function getCungMenh(year) {
+            const cung = ['Cấn', 'Khảm', 'Càn', 'Đoài', 'Tốn', 'Ly', 'Chấn', 'Khôn'];
+            const index = (year % 8);
+            return cung[index] || 'Cấn';
+        }
+
+        // Generate random sao (like competitor AI)
+        function generateStars() {
+            const stars = [
+                'Tử Vi', 'Thiên Phủ', 'Tham Lang', 'Thiên Lương', 'Thiên Tướng',
+                'Thái Dương', 'Thái Âm', 'Cự Môn', 'Thiên Đồng', 'Liêm Trinh',
+                'Vũ Khúc', 'Phá Quân', 'Thất Sát', 'Thiên Cơ', 'Thiên Diêu'
+            ];
+            const shuffled = [...stars].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, 6);
+        }
+
+        // Get random advice
+        function getAdvice(sex) {
+            const advices = [
+                'Bạn là người có tư duy sắc bén, khả năng lãnh đạo tốt. Nên phát huy điểm mạnh trong công việc.',
+                'Trong tình duyên, bạn là người chung thủy và giàu cảm xúc. Hãy tin vào tiếng nói của trái tim.',
+                'Sự nghiệp của bạn có nhiều triển vọng phát triển. Đừng ngại đương đầu với thử thách mới.',
+                'Bạn có khả năng ngoại giao tốt, thích hợp với các công việc liên quan đến giao tiếp và quan hệ công chúng.',
+                'Hãy chú ý đến sức khỏe, đặc biệt là các vấn đề liên quan đến tiêu hóa và thần kinh.',
+                'Bạn là người có tài năng nghệ thuật, hãy dành thời gian để phát triển đam mê của mình.'
+            ];
+            return advices[Math.floor(Math.random() * advices.length)];
+        }
+
+        // Main calculation
+        function calculateTuVi() {
+            const data = getTuViData();
+            const { fullName, gender, day, month, year, hour, birthPlace } = data;
+
+            const canChi = getCanChi(parseInt(year));
+            const cungMenh = getCungMenh(parseInt(year));
+
+            // Xác định cung thân (dựa trên giờ sinh)
+            const hourNames = ['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tỵ', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'];
+            const hourIndex = parseInt(hour) - 1 || 0;
+            const cungThan = hourNames[hourIndex % 12];
+
+            // Các sao
+            const stars = generateStars();
+
+            // Các cung
+            const cungs = [
+                'Mệnh', 'Phụ Mẫu', 'Phúc Đức', 'Điền Trạch', 'Quan Lộc', 'Nô Bộc',
+                'Thiên Di', 'Tật Ách', 'Tài Bạch', 'Tử Tức', 'Phu Thê', 'Huynh Đệ'
+            ];
+
+            // Đại vận
+            const age = new Date().getFullYear() - parseInt(year);
+            const daiVan = Math.floor(age / 10) + 1;
+
+            // Tiểu vận hiện tại
+            const tieuVan = age % 10 || 10;
+
+            // Phân tích tình duyên
+            const tinhDuyen = ['Rất tốt', 'Khá tốt', 'Bình thường', 'Có thử thách', 'Cần cố gắng'][Math.floor(Math.random() *
+            5)];
+
+            // Phân tích sự nghiệp
+            const suNghiep = ['Thăng tiến tốt', 'Ổn định', 'Có biến động', 'Cần thay đổi', 'Phát triển mạnh'][Math.floor(Math
+            .random() * 5)];
+
+            const sexText = gender === '1' ? 'Nam' : 'Nữ';
+
+            return {
+                fullName,
+                gender: sexText,
+                day,
+                month,
+                year,
+                hour: hourNames[hourIndex],
+                birthPlace,
+                canChi,
+                cungMenh,
+                cungThan,
+                stars,
+                cungs,
+                daiVan,
+                tieuVan,
+                tinhDuyen,
+                suNghiep,
+                advice: getAdvice(gender)
+            };
+        }
+
+        // ============================================================
+        // 5. UI CONTROLLER
+        // ============================================================
+        const calculateBtn = document.getElementById('calculateBtn');
+        const loader = document.getElementById('loaderContainer');
+        const modal = document.getElementById('resultModal');
+        const resultContent = document.getElementById('resultContent');
+        const closeModal = document.getElementById('closeModal');
+
+        function calculateAndShow() {
+            const fullName = document.getElementById('fullName').value.trim();
+            const year = document.getElementById('year').value;
+
+            if (!fullName || fullName.length < 2) {
+                alert('Vui lòng nhập họ và tên.');
+                return;
+            }
+            if (!year || year.length < 4) {
+                alert('Vui lòng nhập năm sinh hợp lệ.');
+                return;
+            }
+
+            loader.classList.add('show');
+            calculateBtn.disabled = true;
+
+            setTimeout(() => {
+                const result = calculateTuVi();
+                displayResult(result);
+                loader.classList.remove('show');
+                calculateBtn.disabled = false;
+            }, 1200);
+        }
+
+        function displayResult(result) {
+            const starsHTML = result.stars.map((star, i) =>
+                `<span style="display:inline-block; background:#f0e6f0; padding:4px 14px; border-radius:20px; margin:3px; font-weight:600; color:#4a254b; font-size:0.85rem;">${star}</span>`
+            ).join('');
+
+            resultContent.innerHTML = `
+                <div class="result-title">
+                    🧠 <span class="highlight">LÁ SỐ TỬ VI TRỌN ĐỜI</span>
+                </div>
+
+                <div class="result-subtitle">
+                    Luận giải cho <strong>${result.fullName}</strong> · ${result.gender} · Sinh ngày ${result.day}/${result.month}/${result.year} giờ ${result.hour}
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
+                    <div style="background:#fcf6fa; border-radius:12px; padding:12px 16px; border:1px solid #efe0ed; text-align:center;">
+                        <div style="font-size:0.65rem; text-transform:uppercase; color:#7b4b7a; font-weight:700;">Năm sinh</div>
+                        <div style="font-size:1.3rem; font-weight:800; color:#2d1f2e;">${result.canChi.can} ${result.canChi.chi}</div>
+                        <div style="font-size:0.7rem; color:#7b4b7a;">${result.year}</div>
+                    </div>
+                    <div style="background:#fcf6fa; border-radius:12px; padding:12px 16px; border:1px solid #efe0ed; text-align:center;">
+                        <div style="font-size:0.65rem; text-transform:uppercase; color:#7b4b7a; font-weight:700;">Cung mệnh</div>
+                        <div style="font-size:1.3rem; font-weight:800; color:#2d1f2e;">${result.cungMenh}</div>
+                        <div style="font-size:0.7rem; color:#7b4b7a;">Cung thân: ${result.cungThan}</div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom:14px;">
+                    <div style="font-size:0.7rem; text-transform:uppercase; color:#7b4b7a; font-weight:700; margin-bottom:6px;">⭐ Các sao trong lá số</div>
+                    <div style="display:flex; flex-wrap:wrap; gap:4px;">${starsHTML}</div>
+                </div>
+
+                <div class="result-grid">
+                    <div class="result-card">
+                        <div class="rlabel">📊 Đại vận</div>
+                        <div class="rvalue">${result.daiVan}</div>
+                        <div class="rdesc">Vận trình ${result.daiVan*10} tuổi</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="rlabel">📅 Tiểu vận</div>
+                        <div class="rvalue">${result.tieuVan}</div>
+                        <div class="rdesc">Năm ${new Date().getFullYear()}</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="rlabel">💞 Tình duyên</div>
+                        <div class="rvalue">${result.tinhDuyen}</div>
+                        <div class="rdesc">${result.tinhDuyen === 'Rất tốt' ? '🌟 May mắn trong tình cảm' : '💪 Cần vun đắp'}</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="rlabel">💼 Sự nghiệp</div>
+                        <div class="rvalue">${result.suNghiep}</div>
+                        <div class="rdesc">${result.suNghiep.includes('Thăng') ? '🚀 Cơ hội phát triển' : '📈 Ổn định'}</div>
+                    </div>
+                </div>
+
+                <div class="result-analysis">
+                    <strong>🔮 Luận giải tổng quan</strong><br>
+                    ${result.advice}<br><br>
+                    <strong>Nơi sinh:</strong> ${result.birthPlace} · <strong>Giờ sinh:</strong> ${result.hour}
+                </div>
+
+                <div class="result-actions">
+                    <button class="action-btn primary" onclick="closeModalFn(); setTimeout(calculateAndShow, 300);">
+                        🔄 Thử lại
+                    </button>
+                    <button class="action-btn" onclick="shareResult('${result.fullName}', '${result.cungMenh}', '${result.canChi.can} ${result.canChi.chi}')">
+                        📤 Chia sẻ
+                    </button>
+                </div>
+
+                <div style="text-align:center; margin-top:14px; font-size:0.7rem; color:#a084a0;">
+                    ✕ Dựa trên Tử Vi Đẩu Số · ${new Date().toLocaleDateString('vi-VN')}
+                </div>
+            `;
+
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function shareResult(name, cung, canChi) {
+            const text = `🔮 Lá số Tử vi: ${name} — Cung mệnh ${cung}, ${canChi}. Khám phá vận mệnh tại LoveFortune.vn ❤️`;
+            if (navigator.share) {
+                navigator.share({ title: 'Lá số Tử vi', text, url: window.location.href }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(text + ' ' + window.location.href).then(() => {
+                    alert('📋 Đã sao chép kết quả! Hãy chia sẻ với bạn bè.');
+                }).catch(() => {
+                    prompt('Sao chép nội dung này:', text);
+                });
+            }
+        }
+
+        function closeModalFn() {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+
+        closeModal.addEventListener('click', closeModalFn);
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) closeModalFn();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModalFn();
+        });
+
+        calculateBtn.addEventListener('click', calculateAndShow);
+
+        document.querySelectorAll('#tuviForm input, #tuviForm select').forEach(el => {
+            el.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    calculateAndShow();
+                }
+            });
+        });
+
+        console.log('✅ Lá số Tử vi tool ready!');
+    </script>
+
+</body>
+</html>
