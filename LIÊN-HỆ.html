@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Liên Hệ - Contact Us | LoveFortune</title>
+    <style>
+        /* ============================================================
+                   COMPLETE STYLES
+                   ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8f4f8;
+            color: #2d1f2e;
+            line-height: 1.7;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo .icon {
+            font-size: 1.8rem;
+        }
+
+        .logo .brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo .brand span {
+            color: #f06eaa;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #ffffff;
+            background: rgba(240, 110, 170, 0.15);
+        }
+
+        .nav-menu a.active {
+            color: #f06eaa;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* ============================================================
+                   CONTACT US CONTENT
+                   ============================================================ */
+        .contact-container {
+            max-width: 1000px;
+            margin: 60px auto 60px;
+            padding: 0 40px;
+        }
+
+        .contact-container .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-container .header-section h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #2d1f2e;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-container .header-section h1 span {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-container .header-section .divider {
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #e91e63, #9c27b0);
+            margin: 14px auto 20px;
+            border-radius: 4px;
+        }
+
+        .contact-container .header-section p {
+            color: #7b4b7a;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CONTACT GRID ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info-card {
+            background: white;
+            border-radius: 24px;
+            padding: 30px 30px 35px;
+            border: 1px solid #efe0ed;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .contact-info-card:hover {
+            border-color: #f06eaa;
+            box-shadow: 0 8px 30px rgba(157, 71, 158, 0.06);
+            transform: translateY(-4px);
+        }
+
+        .contact-info-card .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 2rem;
+        }
+
+        .contact-info-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #2d1f2e;
+            margin-bottom: 6px;
+        }
+
+        .contact-info-card p {
+            font-size: 0.95rem;
+            color: #5a4a5a;
+            line-height: 1.6;
+        }
+
+        .contact-info-card a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info-card a:hover {
+            color: #9c27b0;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form-wrapper {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 40px 45px;
+            border: 1px solid #efe0ed;
+            margin-bottom: 30px;
+        }
+
+        .contact-form-wrapper h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d1f2e;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .contact-form-wrapper .form-subtitle {
+            text-align: center;
+            color: #7b4b7a;
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #2d1f2e;
+            margin-bottom: 5px;
+        }
+
+        .form-group label .required {
+            color: #e91e63;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #efe0ed;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: 0.3s;
+            background: white;
+            font-family: inherit;
+            outline: none;
+            color: #2d1f2e;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #e91e63;
+            box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.06);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            border: none;
+            padding: 14px 50px;
+            border-radius: 50px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 24px rgba(233, 30, 99, 0.25);
+            width: 100%;
+            font-family: inherit;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 34px rgba(233, 30, 99, 0.35);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* ===== MAP / SOCIAL ===== */
+        .social-section {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .social-section h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2d1f2e;
+            margin-bottom: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #efe0ed;
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: #7b4b7a;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            border-color: #e91e63;
+            color: #e91e63;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.1);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 0 20px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1a0a1a;
+                padding: 20px;
+                gap: 4px;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 12px 16px;
+                width: 100%;
+                border-radius: 12px;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .contact-container {
+                padding: 0 20px;
+                margin: 40px auto 40px;
+            }
+
+            .contact-container .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .contact-info-card {
+                padding: 22px 20px 26px;
+            }
+
+            .contact-form-wrapper {
+                padding: 28px 20px 30px;
+            }
+
+            .form-row-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-submit {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .site-footer {
+                padding: 40px 20px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-container .header-section h1 {
+                font-size: 1.6rem;
+            }
+
+            .contact-info-card .icon-circle {
+                width: 56px;
+                height: 56px;
+                font-size: 1.6rem;
+            }
+
+            .contact-info-card h3 {
+                font-size: 1rem;
+            }
+
+            .contact-info-card p {
+                font-size: 0.88rem;
+            }
+
+            .contact-form-wrapper h2 {
+                font-size: 1.2rem;
+            }
+
+            .social-links a {
+                width: 48px;
+                height: 48px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 40px 30px;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand .logo-text span {
+            color: #f06eaa;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            padding: 4px 0;
+            font-size: 0.88rem;
+            transition: 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #f06eaa;
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="icon">❤️</span>
+                <span class="brand">Love<span>Fortune</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Bói tình yêu</a></li>
+                <li><a href="#">Thần số học</a></li>
+                <li><a href="#">Tử vi</a></li>
+                <li><a href="#" class="active">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    CONTACT US CONTENT
+    ============================================================ -->
+    <div class="contact-container">
+
+        <div class="header-section">
+            <h1>💬 <span>Liên hệ</span> với chúng tôi</h1>
+            <div class="divider"></div>
+            <p>Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hãy liên hệ với chúng tôi qua bất kỳ kênh nào dưới đây.</p>
+        </div>
+
+        <!-- ===== CONTACT INFO CARDS ===== -->
+        <div class="contact-grid">
+
+            <div class="contact-info-card">
+                <div class="icon-circle">📧</div>
+                <h3>Email</h3>
+                <p>Gửi email cho chúng tôi và nhận phản hồi trong vòng 24 giờ.</p>
+                <p><a href="mailto:support@lovefortune.vn">support@lovefortune.vn</a></p>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="icon-circle">📞</div>
+                <h3>Điện thoại</h3>
+                <p>Liên hệ trực tiếp qua hotline để được hỗ trợ nhanh chóng.</p>
+                <p><a href="tel:19001234">1900 1234</a></p>
+                <p style="font-size:0.8rem; color:#a084a0;">Thứ 2 - Thứ 6: 08:00 - 17:30</p>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="icon-circle">📍</div>
+                <h3>Địa chỉ</h3>
+                <p>Ghé thăm văn phòng của chúng tôi tại địa chỉ bên dưới.</p>
+                <p style="font-size:0.9rem;">Tầng 3, Tòa nhà XYZ, Đường ABC, Quận 1, TP.HCM</p>
+            </div>
+
+            <div class="contact-info-card">
+                <div class="icon-circle">💬</div>
+                <h3>Messenger</h3>
+                <p>Kết nối với chúng tôi qua Facebook Messenger để được tư vấn nhanh.</p>
+                <p><a href="#" target="_blank">Chat với chúng tôi</a></p>
+            </div>
+
+        </div>
+
+        <!-- ===== CONTACT FORM ===== -->
+        <div class="contact-form-wrapper">
+            <h2>📝 Gửi tin nhắn cho chúng tôi</h2>
+            <p class="form-subtitle">Hãy điền thông tin dưới đây, chúng tôi sẽ phản hồi bạn sớm nhất.</p>
+
+            <form id="contactForm" onsubmit="return false;">
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label>Họ và tên <span class="required">*</span></label>
+                        <input type="text" id="fullName" placeholder="Nhập họ và tên" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="Nhập địa chỉ email" required>
+                    </div>
+                </div>
+
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label>Số điện thoại</label>
+                        <input type="tel" id="phone" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="form-group">
+                        <label>Chủ đề <span class="required">*</span></label>
+                        <select id="subject" required>
+                            <option value="">Chọn chủ đề...</option>
+                            <option value="Góp ý">Góp ý</option>
+                            <option value="Hỗ trợ kỹ thuật">Hỗ trợ kỹ thuật</option>
+                            <option value="Hợp tác">Hợp tác</option>
+                            <option value="Báo lỗi">Báo lỗi</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nội dung tin nhắn <span class="required">*</span></label>
+                    <textarea id="message" placeholder="Nhập nội dung tin nhắn của bạn..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submitBtn">📤 Gửi tin nhắn</button>
+
+            </form>
+        </div>
+
+        <!-- ===== SOCIAL SECTION ===== -->
+        <div class="social-section">
+            <h3>🌐 Kết nối với chúng tôi</h3>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="YouTube">▶️</a>
+                <a href="#" aria-label="TikTok">🎵</a>
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="Zalo">💬</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-text">❤️ Love<span>Fortune</span></div>
+                <p>Nền tảng bói toán và phong thủy hàng đầu với độ chính xác cao. Kết hợp thần số học, tử vi và chiêm tinh để mang đến những kết quả ý nghĩa.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Khám phá</h4>
+                <a href="#">Bói tình yêu</a>
+                <a href="#">Thần số học</a>
+                <a href="#">Lá số tử vi</a>
+                <a href="#">Xem ngày tốt</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hỗ trợ</h4>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Quy định bảo mật</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kết nối</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 LoveFortune.vn — Liên hệ · Dành cho mục đích giải trí</p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // 1. MOBILE NAV
+        // ============================================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+            this.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('open');
+                mobileToggle.textContent = '☰';
+            });
+        });
+
+        // ============================================================
+        // 2. CONTACT FORM HANDLER
+        // ============================================================
+        const submitBtn = document.getElementById('submitBtn');
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Validation
+            if (!fullName || fullName.length < 2) {
+                alert('Vui lòng nhập họ và tên (tối thiểu 2 ký tự).');
+                document.getElementById('fullName').focus();
+                return;
+            }
+
+            if (!email || !email.includes('@')) {
+                alert('Vui lòng nhập địa chỉ email hợp lệ.');
+                document.getElementById('email').focus();
+                return;
+            }
+
+            if (!subject) {
+                alert('Vui lòng chọn chủ đề.');
+                document.getElementById('subject').focus();
+                return;
+            }
+
+            if (!message || message.length < 10) {
+                alert('Vui lòng nhập nội dung tin nhắn (tối thiểu 10 ký tự).');
+                document.getElementById('message').focus();
+                return;
+            }
+
+            // Simulate sending
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Đang gửi...';
+
+            setTimeout(() => {
+                alert('✅ Tin nhắn của bạn đã được gửi thành công!\nChúng tôi sẽ phản hồi trong vòng 24 giờ.');
+
+                // Reset form
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = '📤 Gửi tin nhắn';
+
+                // Show success message
+                const successMsg = document.createElement('div');
+                successMsg.style.cssText = `
+                            margin-top: 16px;
+                            padding: 14px 20px;
+                            background: #e8f5e9;
+                            border-radius: 12px;
+                            border-left: 4px solid #2e7d32;
+                            color: #1b5e20;
+                            font-weight: 600;
+                            text-align: center;
+                        `;
+                successMsg.textContent = '✅ Gửi tin nhắn thành công! Cảm ơn bạn đã liên hệ.';
+                contactForm.appendChild(successMsg);
+
+                setTimeout(() => {
+                    successMsg.remove();
+                }, 5000);
+
+            }, 1500);
+        });
+
+        console.log('✅ Liên hệ page ready!');
+    </script>
+
+</body>
+</html>

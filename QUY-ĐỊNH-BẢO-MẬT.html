@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Quy Định Bảo Mật - Privacy Policy | LoveFortune</title>
+    <style>
+        /* ============================================================
+                   COMPLETE STYLES
+                   ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8f4f8;
+            color: #2d1f2e;
+            line-height: 1.7;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo .icon {
+            font-size: 1.8rem;
+        }
+
+        .logo .brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo .brand span {
+            color: #f06eaa;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #ffffff;
+            background: rgba(240, 110, 170, 0.15);
+        }
+
+        .nav-menu a.active {
+            color: #f06eaa;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* ============================================================
+                   PRIVACY POLICY CONTENT
+                   ============================================================ */
+        .privacy-container {
+            max-width: 1000px;
+            margin: 60px auto 60px;
+            padding: 0 40px;
+        }
+
+        .privacy-container .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .privacy-container .header-section h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #2d1f2e;
+            letter-spacing: -0.5px;
+        }
+
+        .privacy-container .header-section h1 span {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .privacy-container .header-section .divider {
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #e91e63, #9c27b0);
+            margin: 14px auto 20px;
+            border-radius: 4px;
+        }
+
+        .privacy-container .header-section p {
+            color: #7b4b7a;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .privacy-container .last-updated {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #a084a0;
+            margin-bottom: 30px;
+        }
+
+        /* ===== PRIVACY SECTIONS ===== */
+        .privacy-section {
+            background: white;
+            border-radius: 24px;
+            padding: 30px 35px;
+            margin-bottom: 20px;
+            border: 1px solid #efe0ed;
+            transition: 0.3s;
+        }
+
+        .privacy-section:hover {
+            border-color: #f06eaa;
+            box-shadow: 0 4px 20px rgba(157, 71, 158, 0.04);
+        }
+
+        .privacy-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d1f2e;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .privacy-section h2 .icon {
+            font-size: 1.6rem;
+        }
+
+        .privacy-section p {
+            font-size: 0.95rem;
+            color: #4a3a4a;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .privacy-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-section ul {
+            padding-left: 24px;
+            margin: 8px 0 10px;
+        }
+
+        .privacy-section ul li {
+            font-size: 0.95rem;
+            color: #4a3a4a;
+            line-height: 1.8;
+            margin-bottom: 4px;
+        }
+
+        .privacy-section .highlight-box {
+            background: #fcf6fa;
+            border-radius: 12px;
+            padding: 16px 20px;
+            border-left: 4px solid #e91e63;
+            margin-top: 12px;
+        }
+
+        .privacy-section .highlight-box p {
+            margin-bottom: 0;
+            font-size: 0.92rem;
+        }
+
+        .privacy-section .highlight-box.green {
+            border-left-color: #2e7d32;
+            background: #e8f5e9;
+        }
+
+        .privacy-section .highlight-box.green p {
+            color: #1b5e20;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 40px 30px;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand .logo-text span {
+            color: #f06eaa;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            padding: 4px 0;
+            font-size: 0.88rem;
+            transition: 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #f06eaa;
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 992px) {
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 0 20px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1a0a1a;
+                padding: 20px;
+                gap: 4px;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 12px 16px;
+                width: 100%;
+                border-radius: 12px;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .privacy-container {
+                padding: 0 20px;
+                margin: 40px auto 40px;
+            }
+
+            .privacy-container .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .privacy-section {
+                padding: 22px 20px;
+            }
+
+            .privacy-section h2 {
+                font-size: 1.2rem;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .site-footer {
+                padding: 40px 20px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-container .header-section h1 {
+                font-size: 1.6rem;
+            }
+
+            .privacy-section {
+                padding: 18px 16px;
+            }
+
+            .privacy-section h2 {
+                font-size: 1rem;
+            }
+
+            .privacy-section p,
+            .privacy-section ul li {
+                font-size: 0.88rem;
+            }
+
+            .privacy-section .highlight-box {
+                padding: 12px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="icon">❤️</span>
+                <span class="brand">Love<span>Fortune</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Bói tình yêu</a></li>
+                <li><a href="#">Thần số học</a></li>
+                <li><a href="#">Tử vi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    PRIVACY POLICY CONTENT
+    ============================================================ -->
+    <div class="privacy-container">
+
+        <div class="header-section">
+            <h1>🔒 <span>Quy định</span> bảo mật</h1>
+            <div class="divider"></div>
+            <p>Chúng tôi cam kết bảo vệ thông tin cá nhân và quyền riêng tư của bạn.</p>
+        </div>
+
+        <div class="last-updated">
+            📅 Cập nhật lần cuối: <strong>04 tháng 09, 2026</strong>
+        </div>
+
+        <!-- Section 1: Giới thiệu -->
+        <div class="privacy-section">
+            <h2><span class="icon">📖</span> 1. Giới thiệu chung</h2>
+            <p>Chào mừng bạn đến với <strong>LoveFortune.vn</strong>. Chúng tôi hiểu rằng quyền riêng tư của bạn là quan trọng. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng, chia sẻ và bảo vệ thông tin cá nhân của bạn khi bạn sử dụng website và dịch vụ của chúng tôi.</p>
+            <div class="highlight-box green">
+                <p><strong>🔐 Cam kết của chúng tôi:</strong> Bảo vệ thông tin cá nhân của bạn là ưu tiên hàng đầu. Chúng tôi chỉ sử dụng dữ liệu của bạn để cải thiện dịch vụ và không bao giờ bán thông tin của bạn cho bên thứ ba.</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Thông tin thu thập -->
+        <div class="privacy-section">
+            <h2><span class="icon">📊</span> 2. Thông tin chúng tôi thu thập</h2>
+            <p>Khi bạn sử dụng website của chúng tôi, chúng tôi có thể thu thập các loại thông tin sau:</p>
+            <ul>
+                <li><strong>Thông tin cá nhân:</strong> Họ tên, ngày sinh, giới tính, email, số điện thoại (khi bạn đăng ký hoặc sử dụng dịch vụ)</li>
+                <li><strong>Thông tin sử dụng:</strong> Lịch sử tra cứu, kết quả bói toán, các công cụ bạn đã sử dụng</li>
+                <li><strong>Thông tin kỹ thuật:</strong> Địa chỉ IP, loại trình duyệt, thiết bị, hệ điều hành, thời gian truy cập</li>
+                <li><strong>Cookie:</strong> Chúng tôi sử dụng cookie để cải thiện trải nghiệm người dùng và phân tích lưu lượng truy cập</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>💡 Lưu ý:</strong> Bạn có thể từ chối cookie bằng cách điều chỉnh cài đặt trình duyệt, nhưng điều này có thể ảnh hưởng đến một số tính năng của website.</p>
+            </div>
+        </div>
+
+        <!-- Section 3: Cách sử dụng thông tin -->
+        <div class="privacy-section">
+            <h2><span class="icon">⚙️</span> 3. Cách chúng tôi sử dụng thông tin</h2>
+            <p>Chúng tôi sử dụng thông tin thu thập được để:</p>
+            <ul>
+                <li><strong>Cung cấp dịch vụ:</strong> Thực hiện tra cứu, phân tích và hiển thị kết quả cho bạn</li>
+                <li><strong>Cải thiện trải nghiệm:</strong> Nâng cấp các công cụ và tính năng dựa trên phản hồi và hành vi sử dụng</li>
+                <li><strong>Hỗ trợ khách hàng:</strong> Giải đáp thắc mắc và hỗ trợ kỹ thuật khi bạn cần</li>
+                <li><strong>Gửi thông tin:</strong> Thông báo về các tính năng mới, cập nhật và chương trình khuyến mãi (nếu bạn đồng ý)</li>
+                <li><strong>Phân tích:</strong> Nghiên cứu xu hướng và thống kê để cải thiện dịch vụ</li>
+            </ul>
+        </div>
+
+        <!-- Section 4: Bảo mật dữ liệu -->
+        <div class="privacy-section">
+            <h2><span class="icon">🛡️</span> 4. Bảo mật dữ liệu</h2>
+            <p>Chúng tôi áp dụng các biện pháp bảo mật nghiêm ngặt để bảo vệ thông tin cá nhân của bạn:</p>
+            <ul>
+                <li><strong>Mã hóa SSL:</strong> Tất cả dữ liệu truyền tải giữa trình duyệt và máy chủ được mã hóa bằng SSL</li>
+                <li><strong>Lưu trữ an toàn:</strong> Dữ liệu được lưu trữ trên máy chủ bảo mật cao với tường lửa và hệ thống giám sát</li>
+                <li><strong>Kiểm soát truy cập:</strong> Chỉ nhân viên được ủy quyền mới có quyền truy cập vào dữ liệu cá nhân</li>
+                <li><strong>Xóa dữ liệu:</strong> Dữ liệu không cần thiết sẽ được xóa định kỳ theo quy định</li>
+            </ul>
+            <div class="highlight-box green">
+                <p><strong>✅ Chứng nhận:</strong> Chúng tôi tuân thủ các tiêu chuẩn bảo mật quốc tế và các quy định bảo vệ dữ liệu của Việt Nam.</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Cookie -->
+        <div class="privacy-section">
+            <h2><span class="icon">🍪</span> 5. Cookie và công nghệ theo dõi</h2>
+            <p>Website sử dụng cookie để:</p>
+            <ul>
+                <li><strong>Ghi nhớ phiên đăng nhập:</strong> Giúp bạn không cần đăng nhập lại mỗi lần truy cập</li>
+                <li><strong>Phân tích:</strong> Thu thập dữ liệu về cách bạn sử dụng website để cải thiện trải nghiệm</li>
+                <li><strong>Cá nhân hóa:</strong> Hiển thị nội dung phù hợp với sở thích của bạn</li>
+                <li><strong>Quảng cáo:</strong> Hiển thị quảng cáo liên quan đến nhu cầu của bạn</li>
+            </ul>
+            <p>Bạn có thể quản lý cookie thông qua cài đặt trình duyệt. Bạn có thể chọn chấp nhận tất cả, từ chối hoặc xóa cookie bất kỳ lúc nào.</p>
+        </div>
+
+        <!-- Section 6: Chia sẻ thông tin -->
+        <div class="privacy-section">
+            <h2><span class="icon">🤝</span> 6. Chia sẻ thông tin với bên thứ ba</h2>
+            <p>Chúng tôi <strong>không bao giờ bán, trao đổi hoặc chuyển giao</strong> thông tin cá nhân của bạn cho bên thứ ba, trừ các trường hợp sau:</p>
+            <ul>
+                <li><strong>Nhà cung cấp dịch vụ:</strong> Các đối tác đáng tin cậy hỗ trợ chúng tôi vận hành website và cung cấp dịch vụ</li>
+                <li><strong>Yêu cầu pháp lý:</strong> Khi pháp luật yêu cầu hoặc để bảo vệ quyền lợi của chúng tôi</li>
+                <li><strong>Sự đồng ý:</strong> Khi bạn đã đồng ý chia sẻ thông tin</li>
+            </ul>
+            <div class="highlight-box green">
+                <p><strong>🔒 Cam kết:</strong> Chúng tôi luôn yêu cầu các đối tác tuân thủ chính sách bảo mật của chúng tôi và không sử dụng thông tin của bạn cho mục đích riêng.</p>
+            </div>
+        </div>
+
+        <!-- Section 7: Quyền của bạn -->
+        <div class="privacy-section">
+            <h2><span class="icon">👤</span> 7. Quyền của bạn đối với dữ liệu</h2>
+            <p>Bạn có các quyền sau đây đối với thông tin cá nhân của mình:</p>
+            <ul>
+                <li><strong>Quyền truy cập:</strong> Yêu cầu xem thông tin chúng tôi đang lưu trữ về bạn</li>
+                <li><strong>Quyền chỉnh sửa:</strong> Yêu cầu sửa đổi thông tin không chính xác</li>
+                <li><strong>Quyền xóa:</strong> Yêu cầu xóa thông tin cá nhân của bạn</li>
+                <li><strong>Quyền phản đối:</strong> Từ chối việc chúng tôi sử dụng thông tin của bạn cho một số mục đích nhất định</li>
+                <li><strong>Quyền rút đồng ý:</strong> Rút lại sự đồng ý đã cấp trước đó</li>
+            </ul>
+            <p>Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi qua email <strong>support@lovefortune.vn</strong>.</p>
+        </div>
+
+        <!-- Section 8: Dữ liệu trẻ em -->
+        <div class="privacy-section">
+            <h2><span class="icon">🧒</span> 8. Dữ liệu của trẻ em</h2>
+            <p>Dịch vụ của chúng tôi không dành cho trẻ em dưới 16 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu phát hiện đã thu thập thông tin từ trẻ em, chúng tôi sẽ xóa ngay lập tức.</p>
+            <p>Nếu bạn là phụ huynh hoặc người giám hộ và phát hiện trẻ em đã cung cấp thông tin cho chúng tôi, vui lòng liên hệ để chúng tôi xóa dữ liệu.</p>
+        </div>
+
+        <!-- Section 9: Thay đổi chính sách -->
+        <div class="privacy-section">
+            <h2><span class="icon">🔄</span> 9. Thay đổi chính sách bảo mật</h2>
+            <p>Chúng tôi có thể cập nhật chính sách bảo mật này định kỳ để phản ánh các thay đổi trong hoạt động hoặc yêu cầu pháp lý. Khi có thay đổi quan trọng, chúng tôi sẽ thông báo cho bạn qua:</p>
+            <ul>
+                <li>Banner thông báo trên website</li>
+                <li>Email (nếu bạn đã đăng ký nhận tin)</li>
+            </ul>
+            <p>Việc bạn tiếp tục sử dụng website sau khi có thay đổi đồng nghĩa với việc bạn chấp nhận chính sách mới.</p>
+            <div class="highlight-box">
+                <p><strong>📌 Khuyến nghị:</strong> Hãy thường xuyên kiểm tra trang này để cập nhật những thay đổi mới nhất.</p>
+            </div>
+        </div>
+
+        <!-- Section 10: Liên hệ -->
+        <div class="privacy-section">
+            <h2><span class="icon">📧</span> 10. Liên hệ với chúng tôi</h2>
+            <p>Nếu bạn có bất kỳ câu hỏi, thắc mắc hoặc yêu cầu nào liên quan đến chính sách bảo mật này, vui lòng liên hệ với chúng tôi:</p>
+            <ul>
+                <li><strong>Email:</strong> support@lovefortune.vn</li>
+                <li><strong>Hotline:</strong> 1900 1234</li>
+                <li><strong>Địa chỉ:</strong> Tầng 3, Tòa nhà XYZ, Đường ABC, Quận 1, TP.HCM</li>
+                <li><strong>Thời gian làm việc:</strong> Thứ 2 - Thứ 6: 08:00 - 17:30</li>
+            </ul>
+            <div class="highlight-box green">
+                <p><strong>💬 Chúng tôi sẵn sàng giúp đỡ!</strong> Mọi thắc mắc của bạn sẽ được giải đáp trong vòng 24 giờ.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-text">❤️ Love<span>Fortune</span></div>
+                <p>Nền tảng bói toán và phong thủy hàng đầu với độ chính xác cao. Kết hợp thần số học, tử vi và chiêm tinh để mang đến những kết quả ý nghĩa.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Khám phá</h4>
+                <a href="#">Bói tình yêu</a>
+                <a href="#">Thần số học</a>
+                <a href="#">Lá số tử vi</a>
+                <a href="#">Xem ngày tốt</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hỗ trợ</h4>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Quy định bảo mật</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kết nối</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 LoveFortune.vn — Quy định bảo mật · Dành cho mục đích giải trí</p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // MOBILE NAV
+        // ============================================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+            this.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('open');
+                mobileToggle.textContent = '☰';
+            });
+        });
+
+        console.log('✅ Quy định bảo mật page ready!');
+    </script>
+
+</body>
+</html>

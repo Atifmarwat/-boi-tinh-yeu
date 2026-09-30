@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Điều Khoản Sử Dụng - Terms of Use | LoveFortune</title>
+    <style>
+        /* ============================================================
+                   COMPLETE STYLES
+                   ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8f4f8;
+            color: #2d1f2e;
+            line-height: 1.7;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            padding: 0 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo .icon {
+            font-size: 1.8rem;
+        }
+
+        .logo .brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo .brand span {
+            color: #f06eaa;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: #ffffff;
+            background: rgba(240, 110, 170, 0.15);
+        }
+
+        .nav-menu a.active {
+            color: #f06eaa;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* ============================================================
+                   TERMS OF USE CONTENT
+                   ============================================================ */
+        .terms-container {
+            max-width: 1000px;
+            margin: 60px auto 60px;
+            padding: 0 40px;
+        }
+
+        .terms-container .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .terms-container .header-section h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #2d1f2e;
+            letter-spacing: -0.5px;
+        }
+
+        .terms-container .header-section h1 span {
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .terms-container .header-section .divider {
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, #e91e63, #9c27b0);
+            margin: 14px auto 20px;
+            border-radius: 4px;
+        }
+
+        .terms-container .header-section p {
+            color: #7b4b7a;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .terms-container .last-updated {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #a084a0;
+            margin-bottom: 30px;
+        }
+
+        /* ===== TERMS SECTIONS ===== */
+        .terms-section {
+            background: white;
+            border-radius: 24px;
+            padding: 30px 35px;
+            margin-bottom: 20px;
+            border: 1px solid #efe0ed;
+            transition: 0.3s;
+        }
+
+        .terms-section:hover {
+            border-color: #f06eaa;
+            box-shadow: 0 4px 20px rgba(157, 71, 158, 0.04);
+        }
+
+        .terms-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d1f2e;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .terms-section h2 .icon {
+            font-size: 1.6rem;
+        }
+
+        .terms-section p {
+            font-size: 0.95rem;
+            color: #4a3a4a;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .terms-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .terms-section ul {
+            padding-left: 24px;
+            margin: 8px 0 10px;
+        }
+
+        .terms-section ul li {
+            font-size: 0.95rem;
+            color: #4a3a4a;
+            line-height: 1.8;
+            margin-bottom: 4px;
+        }
+
+        .terms-section .highlight-box {
+            background: #fcf6fa;
+            border-radius: 12px;
+            padding: 16px 20px;
+            border-left: 4px solid #e91e63;
+            margin-top: 12px;
+        }
+
+        .terms-section .highlight-box p {
+            margin-bottom: 0;
+            font-size: 0.92rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: linear-gradient(135deg, #1a0a1a 0%, #2d1a2d 50%, #4a254b 100%);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 40px 30px;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand .logo-text span {
+            color: #f06eaa;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            padding: 4px 0;
+            font-size: 0.88rem;
+            transition: 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #f06eaa;
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 992px) {
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 0 20px;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #1a0a1a;
+                padding: 20px;
+                gap: 4px;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 12px 16px;
+                width: 100%;
+                border-radius: 12px;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .terms-container {
+                padding: 0 20px;
+                margin: 40px auto 40px;
+            }
+
+            .terms-container .header-section h1 {
+                font-size: 2rem;
+            }
+
+            .terms-section {
+                padding: 22px 20px;
+            }
+
+            .terms-section h2 {
+                font-size: 1.2rem;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .site-footer {
+                padding: 40px 20px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .terms-container .header-section h1 {
+                font-size: 1.6rem;
+            }
+
+            .terms-section {
+                padding: 18px 16px;
+            }
+
+            .terms-section h2 {
+                font-size: 1rem;
+            }
+
+            .terms-section p,
+            .terms-section ul li {
+                font-size: 0.88rem;
+            }
+
+            .terms-section .highlight-box {
+                padding: 12px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="icon">❤️</span>
+                <span class="brand">Love<span>Fortune</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Bói tình yêu</a></li>
+                <li><a href="#">Thần số học</a></li>
+                <li><a href="#">Tử vi</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ============================================================
+    TERMS OF USE CONTENT
+    ============================================================ -->
+    <div class="terms-container">
+
+        <div class="header-section">
+            <h1>📜 <span>Điều khoản</span> sử dụng</h1>
+            <div class="divider"></div>
+            <p>Vui lòng đọc kỹ các điều khoản trước khi sử dụng dịch vụ của chúng tôi.</p>
+        </div>
+
+        <div class="last-updated">
+            📅 Cập nhật lần cuối: <strong>04 tháng 09, 2026</strong>
+        </div>
+
+        <!-- Section 1: Giới thiệu -->
+        <div class="terms-section">
+            <h2><span class="icon">📖</span> 1. Giới thiệu chung</h2>
+            <p>Chào mừng bạn đến với <strong>LoveFortune.vn</strong> (sau đây gọi là "Chúng tôi", "Website"). Bằng việc truy cập và sử dụng website này, bạn đồng ý tuân thủ các điều khoản và điều kiện sau đây.</p>
+            <p>Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng không sử dụng website của chúng tôi.</p>
+            <div class="highlight-box">
+                <p><strong>⚠️ Lưu ý:</strong> Các điều khoản này có thể được cập nhật định kỳ. Chúng tôi khuyến khích bạn kiểm tra thường xuyên để nắm bắt các thay đổi.</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Chấp nhận điều khoản -->
+        <div class="terms-section">
+            <h2><span class="icon">✅</span> 2. Chấp nhận điều khoản</h2>
+            <p>Bằng việc sử dụng website, bạn xác nhận rằng bạn đã đọc, hiểu và đồng ý với tất cả các điều khoản và điều kiện được nêu trong tài liệu này.</p>
+            <p>Nếu bạn là người dưới 18 tuổi, vui lòng sử dụng website dưới sự giám sát của cha mẹ hoặc người giám hộ hợp pháp.</p>
+        </div>
+
+        <!-- Section 3: Dịch vụ -->
+        <div class="terms-section">
+            <h2><span class="icon">🔮</span> 3. Dịch vụ cung cấp</h2>
+            <p>LoveFortune.vn cung cấp các dịch vụ giải trí và tham khảo bao gồm:</p>
+            <ul>
+                <li><strong>Bói tình yêu</strong> — Phân tích độ tương hợp dựa trên tên và ngày sinh</li>
+                <li><strong>Thần số học</strong> — Tra cứu và giải mã các chỉ số quan trọng</li>
+                <li><strong>Lá số tử vi</strong> — Luận giải vận mệnh trọn đời</li>
+                <li><strong>Xem ngày tốt xấu</strong> — Chọn ngày lành tháng tốt</li>
+                <li><strong>Các công cụ bói toán khác</strong></li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>🔮 Lưu ý quan trọng:</strong> Tất cả thông tin và kết quả trên website chỉ mang tính chất <strong>tham khảo và giải trí</strong>. Không nên sử dụng kết quả để đưa ra các quyết định quan trọng trong cuộc sống.</p>
+            </div>
+        </div>
+
+        <!-- Section 4: Quyền và nghĩa vụ người dùng -->
+        <div class="terms-section">
+            <h2><span class="icon">👤</span> 4. Quyền và nghĩa vụ của người dùng</h2>
+            <p><strong>Quyền của bạn:</strong></p>
+            <ul>
+                <li>Truy cập miễn phí vào các công cụ và dịch vụ cơ bản</li>
+                <li>Đóng góp ý kiến và phản hồi về dịch vụ</li>
+                <li>Yêu cầu hỗ trợ kỹ thuật khi gặp sự cố</li>
+            </ul>
+            <p><strong>Nghĩa vụ của bạn:</strong></p>
+            <ul>
+                <li>Không sử dụng website cho mục đích bất hợp pháp</li>
+                <li>Không can thiệp hoặc phá hoại hệ thống</li>
+                <li>Không đăng tải nội dung vi phạm bản quyền hoặc gây hại</li>
+                <li>Cung cấp thông tin chính xác khi sử dụng dịch vụ</li>
+            </ul>
+        </div>
+
+        <!-- Section 5: Bảo mật thông tin -->
+        <div class="terms-section">
+            <h2><span class="icon">🔒</span> 5. Bảo mật thông tin</h2>
+            <p>Chúng tôi cam kết bảo vệ quyền riêng tư và thông tin cá nhân của bạn. Mọi thông tin bạn cung cấp chỉ được sử dụng để phục vụ dịch vụ và không được chia sẻ với bên thứ ba.</p>
+            <p>Để biết thêm chi tiết, vui lòng tham khảo <a href="#" style="color:#e91e63; font-weight:600;">Chính sách bảo mật</a> của chúng tôi.</p>
+            <div class="highlight-box">
+                <p><strong>🔐 Cam kết:</strong> Chúng tôi áp dụng các biện pháp bảo mật công nghệ cao để bảo vệ dữ liệu của bạn.</p>
+            </div>
+        </div>
+
+        <!-- Section 6: Bản quyền -->
+        <div class="terms-section">
+            <h2><span class="icon">©️</span> 6. Bản quyền và sở hữu trí tuệ</h2>
+            <p>Toàn bộ nội dung trên website, bao gồm văn bản, hình ảnh, biểu tượng, giao diện và mã nguồn, đều thuộc bản quyền của <strong>LoveFortune.vn</strong>.</p>
+            <p>Nghiêm cấm sao chép, phân phối hoặc sử dụng bất kỳ nội dung nào mà không có sự cho phép bằng văn bản của chúng tôi.</p>
+        </div>
+
+        <!-- Section 7: Từ chối trách nhiệm -->
+        <div class="terms-section">
+            <h2><span class="icon">⚖️</span> 7. Từ chối trách nhiệm</h2>
+            <p>LoveFortune.vn cung cấp các thông tin và dịch vụ "như hiện trạng" và "như hiện có". Chúng tôi không đảm bảo tính chính xác tuyệt đối của các kết quả.</p>
+            <p>Chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng thông tin trên website, bao gồm nhưng không giới hạn ở:</p>
+            <ul>
+                <li>Thiệt hại về tài chính hoặc cơ hội</li>
+                <li>Quyết định dựa trên kết quả bói toán</li>
+                <li>Các vấn đề cá nhân hoặc xã hội</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>⚠️ Tuyên bố miễn trừ:</strong> Tất cả kết quả chỉ mang tính <strong>giải trí</strong> và <strong>tham khảo</strong>. Bạn tự chịu trách nhiệm với mọi quyết định của mình.</p>
+            </div>
+        </div>
+
+        <!-- Section 8: Liên kết với bên thứ ba -->
+        <div class="terms-section">
+            <h2><span class="icon">🔗</span> 8. Liên kết với bên thứ ba</h2>
+            <p>Website có thể chứa các liên kết đến các trang web của bên thứ ba. Chúng tôi không kiểm soát và không chịu trách nhiệm về nội dung hoặc chính sách bảo mật của các trang web đó.</p>
+            <p>Việc truy cập các liên kết này là hoàn toàn tự nguyện và bạn tự chịu rủi ro.</p>
+        </div>
+
+        <!-- Section 9: Thay đổi điều khoản -->
+        <div class="terms-section">
+            <h2><span class="icon">🔄</span> 9. Thay đổi điều khoản</h2>
+            <p>Chúng tôi có quyền sửa đổi hoặc cập nhật các điều khoản này bất kỳ lúc nào. Các thay đổi sẽ có hiệu lực ngay khi được đăng tải trên website.</p>
+            <p>Việc bạn tiếp tục sử dụng website sau khi có thay đổi đồng nghĩa với việc bạn chấp nhận các điều khoản mới.</p>
+            <div class="highlight-box">
+                <p><strong>📢 Khuyến nghị:</strong> Hãy thường xuyên kiểm tra trang này để cập nhật những thay đổi mới nhất.</p>
+            </div>
+        </div>
+
+        <!-- Section 10: Liên hệ -->
+        <div class="terms-section">
+            <h2><span class="icon">📧</span> 10. Liên hệ</h2>
+            <p>Nếu bạn có bất kỳ câu hỏi hoặc thắc mắc nào về các điều khoản này, vui lòng liên hệ với chúng tôi:</p>
+            <ul>
+                <li><strong>Email:</strong> support@lovefortune.vn</li>
+                <li><strong>Hotline:</strong> 1900 1234</li>
+                <li><strong>Địa chỉ:</strong> Tầng 3, Tòa nhà XYZ, Đường ABC, Quận 1, TP.HCM</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-text">❤️ Love<span>Fortune</span></div>
+                <p>Nền tảng bói toán và phong thủy hàng đầu với độ chính xác cao. Kết hợp thần số học, tử vi và chiêm tinh để mang đến những kết quả ý nghĩa.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Khám phá</h4>
+                <a href="#">Bói tình yêu</a>
+                <a href="#">Thần số học</a>
+                <a href="#">Lá số tử vi</a>
+                <a href="#">Xem ngày tốt</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hỗ trợ</h4>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Điều khoản sử dụng</a>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Liên hệ</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kết nối</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 LoveFortune.vn — Điều khoản sử dụng · Dành cho mục đích giải trí</p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ============================================================
+        // MOBILE NAV
+        // ============================================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+            this.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('open');
+                mobileToggle.textContent = '☰';
+            });
+        });
+
+        console.log('✅ Terms of Use page ready!');
+    </script>
+
+</body>
+</html>
